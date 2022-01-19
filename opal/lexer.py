@@ -113,6 +113,33 @@ class Lexer(object):
         return re.compile('|'.join(self._convert_rules(rules)))
 
     def _tokenize_line(self, line, line_num):
+        linex = line.replace(" = ","=")
+        linex = linex.split("=")
+        temp_l = linex[0]
+        linex = linex[0].split(".")
+        ends = []
+        if len(linex) not in [0,1]:
+            linez = ""
+            for item in linex:
+                if item == linex[0]:
+                    linez += item
+                elif item == linex[-1]:
+                    ends.append(item)
+                    if item.endswith(")"):
+                        
+                        itex = item.split("(",1)
+                        linez += f"['{itex[0]}']"
+                        linez += "(" + itex[1]
+                        
+                    else:
+                        linez += f"['{item}']"
+                else:
+                    linez += f"['{item}']"
+
+            line = line.replace(temp_l,linez)
+        
+                
+        #print(line)
         pos = 0
         while pos < len(line):
             matches = self._regex.match(line, pos)

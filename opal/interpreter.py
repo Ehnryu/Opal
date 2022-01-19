@@ -270,9 +270,9 @@ def add_builtins(env):
         
         'require': (['pkg'], lambda args, e: __import__(args['pkg'],globals(), locals(),[])),
         'getattr': (['object',"from"], lambda args, e: getattr(args['object'],args["from"])),
-        'import_from': (['object',"from"], lambda args, e: loadfunc(args)),
+        'require_from': (['object',"from"], lambda args, e: loadfunc(args)),
         'callpyfunc': (['obj',"args"], lambda args, e: callpy(args["obj"],args["args"])),
-        'fimport': (['object',"from","args"], lambda args, e: getfrom(args)),
+        'frequire': (['object',"from","args"], lambda args, e: getfrom(args)),
         'pause': (['seconds'], lambda args, e: time.sleep(args['seconds'])),
         'input': (["prompt"], lambda args, e: input(args["prompt"])),
         'prompt': (["prompt"], lambda args, e: input(args["prompt"])),

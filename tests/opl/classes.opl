@@ -1,0 +1,13 @@
+class = {"__init__":"hi"}
+func e():
+    print("ef")
+func ewithargs(e):
+    print(e)
+class.e = e
+class.ew = ewithargs
+print("trying normal var")
+class.__init__
+print("trying function with 0 params")
+class.e()
+print("trying function with 1 param")
+class.ew("eeijijioe")

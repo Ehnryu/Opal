@@ -1,0 +1,5 @@
+class = {"__init__":"hi"}
+func e():
+    print("ef")
+class.e = e
+class.__init__

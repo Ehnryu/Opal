@@ -29,7 +29,7 @@ def getfrom(args):
     frem = args["from"]
     main = args["object"]
     arg = args["args"]
-    func  = eval.exec(f"func {frem}():\n    x = require('{main}')\n    z = import_from(x,'{frem}')\n    callpyfunc(z,{arg})\n{frem}")
+    func  = eval.exec(f"func {frem}():\n    x = require('{main}')\n    z = require_from(x,'{frem}')\n    callpyfunc(z,{arg})\n{frem}")
     return func
     
             
