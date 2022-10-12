@@ -1,0 +1,10 @@
+
+pyimport sys
+func f_on(f,l):
+ x = lin(f,sys.argv)
+ if x == True:
+  l()
+ return l
+parser = {"on":f_on}
+module = {}
+module.exports = parser

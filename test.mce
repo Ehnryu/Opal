@@ -1,0 +1,8 @@
+x = {"hi":"yeah"}
+x["__init__"] = "yo"
+print("----------------")
+print(x)
+print(x["hi"])
+x.hi = "yo"
+x["hi"] = "yeahlo"
+print(x)
