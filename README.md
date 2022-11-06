@@ -1,3 +1,8 @@
-# OPAL
-# use ::: as . and use split in print(line)
-# pull some cool stuff with if item == linex[1] for class.__init__
+# Monochrome
+
+### Installation:
+```bash
+git clone https://github.com/wynwxst/Monochrome/
+cd Monochrome
+python -m monochrome --help
+```
